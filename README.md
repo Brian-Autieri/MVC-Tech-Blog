@@ -2,9 +2,11 @@
 
 ## Description
 
-The purpose of this project was to create a blog site for users to create an account, make posts, and comment on other users' posts. This project was created using the Model-View-Controller paradigm, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+The purpose of this project was to create a CMS- style blog site for users to create an account, make posts, and comment on other users' posts. This project was created using the Model-View-Controller paradigm, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
 ## Usage
+
+To use this application, visit the deployed site at . To run the application locally, clone the repository to your local machine, navigate to the root directory of the project in the terminal, and run `npm install` to install the dependencies. Then, run `npm start` to start the server. The application will be running at http://localhost:3001/.
 
 ## Webpage Link
 

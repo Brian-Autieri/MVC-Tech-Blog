@@ -1,6 +1,7 @@
 const { writeFileSync } = require("fs")
 const { faker } = require('@faker-js/faker');
-const path = require("path")
+const path = require("path");
+const { create } = require("domain");
 
 // FOR RUNNING INSIDE THE TECHBLOG CHALLENGE
 // npm i @faker-js/faker
