@@ -11,11 +11,11 @@
     <form class="form new-project-form">
       <div class="form-group">
         <label for="project-name">post name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
+        <input class="form-input" type="text" id="project-desc" name="project-name" />
       </div>
       <div class="form-group">
         <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+        <textarea class="form-input" id="content" name="project-desc"></textarea>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
@@ -35,6 +35,7 @@
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+        <a href="/edit/{{post.id}}" class="btn btn-sm btn-primary">EDIT</a>
       </div>
     </div>
     {{/each}}
@@ -42,4 +43,4 @@
   {{/if}}
 </div>
 
-<script src="/js/dashboard.js"></script>
+<script src="/js/post.js"></script>

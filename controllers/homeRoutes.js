@@ -65,15 +65,40 @@ router.get('/', async (req, res) => {
     }
   });
 
-  router.post('/post', withAuth, async (req, res) => {
+  router.get('/dashboard', withAuth, async (req, res) => {
     try {
-      const postData = await Post.create({
-        ...req.body,
-        user_id: req.session.user_id,
+      // Get all projects and JOIN with user data
+      const postData = await Post.findAll({
+        where: {
+          user_id: req.session.user_id
+        },
       });
-      res.status(200).json(postData);
+  
+      // Serialize data so the template can read it
+      const posts = postData.map((post) => post.get({ plain: true }));
+  
+      // Pass serialized data and session flag into template
+      res.render('dashboard', { 
+        posts, 
+        logged_in: req.session.logged_in 
+      });
     } catch (err) {
-      res.status(400).json(err);
+      res.status(500).json(err);
+    }
+  });
+
+  router.get('/edit/:id', withAuth, async (req, res) => {
+    try {
+      const projectData = await Post.findByPk(req.params.id, {});
+  
+      const post = projectData.get({ plain: true });
+      console.log(post);
+      res.render('update', {
+        ...post,
+        logged_in: req.session.logged_in
+      });
+    } catch (err) {
+      res.status(500).json(err);
     }
   });
   
