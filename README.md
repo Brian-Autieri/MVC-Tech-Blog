@@ -6,11 +6,15 @@ The purpose of this project was to create a CMS- style blog site for users to cr
 
 ## Usage
 
-To use this application, visit the deployed site at . To run the application locally, clone the repository to your local machine, navigate to the root directory of the project in the terminal, and run `npm install` to install the dependencies. Then, run `npm start` to start the server. The application will be running at http://localhost:3001/.
+To use this application, visit the deployed site with the webpage link below. To run the application locally, clone the repository to your local machine, navigate to the root directory of the project in the terminal, and run `npm install` to install the dependencies. Then, run `npm start` to start the server. The application will be running at http://localhost:3001/.
 
 ## Webpage Link
 
+https://mvc-tech-blog-ba-0cd546a6f915.herokuapp.com/
+
 ## Webpage Screenshot
+
+![alt text](mvc-tech-blog.png)
 
 ## Credits
 
