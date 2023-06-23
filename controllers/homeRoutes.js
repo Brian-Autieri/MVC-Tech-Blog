@@ -55,6 +55,9 @@ router.get('/', async (req, res) => {
       });
   
       const post = projectData.get({ plain: true });
+
+      console.log(post);
+
       console.log(post);
       res.render('post', {
         ...post,
